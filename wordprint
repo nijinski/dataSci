@@ -1,0 +1,9 @@
+with open('ep1.txt', 'r') as f: 
+    wl = {}
+    for line in f: 
+        token_data = nltk.word_tokenize(line)
+        for word in token_data: 
+            if word in wl.keys(): 
+                wl[word] += 1
+            else:
+                wl[word] = 1
